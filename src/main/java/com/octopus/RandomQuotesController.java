@@ -19,7 +19,8 @@ public class RandomQuotesController {
     private static final Random RANDOM = new Random();
     private static final String LINE_END_RE = "\r\n?|\n";
 
-    @Value("${spring.profiles.active:unknown}")
+#    @Value("${spring.profiles.active:unknown}")
+    @Value("${spring.profiles.active}:unknown")    
     private String activeProfile;
 
     @Autowired
